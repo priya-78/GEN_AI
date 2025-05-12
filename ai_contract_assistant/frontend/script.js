@@ -1,0 +1,1 @@
+async function optimize() { const text = document.getElementById('contract').value; const res = await fetch('/optimize/', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({text}) }); const data = await res.json(); document.getElementById('output').innerText = JSON.stringify(data.optimized_clauses, null, 2); }
